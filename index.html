@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>How the Web Works</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="window">
+        <div id="title"><img src="images/IE Home.png" class="icon" alt="">How the Web Works </div>
+        <div id="webpage">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="#history">Brief history of the Web</a></li>
+                        <li><a href="#web-page-delivered">How a Web page is delivered</a></li>
+                        <li><a href="#how-pages-work">Briefly how Web pages work</a></li>
+                    </ul>
+                </nav>
+                <h1>How the Web Delivers and Renders Pages</h1>
+
+
+            </header>
+
+            <main>
+                <section id="history">
+                    <h2>Brief history of the Web</h2>
+                    <p>
+                        <strong>The World Wide Web </strong> (WWW) is a system that allows users to share content over
+                        the Internet. It
+                        was
+                        invented by Tim Berners-Lee in 1989 while he worked at CERN. His aim was to create a system that
+                        allowed scientists around the world to share information automatically and efficiently. The Web
+                        combined the emerging technologies of computers, data networks, and hypertext into a single,
+                        user-friendly global information system.
+                    </p>
+
+                    <p>
+                        Berners-Lee wrote his first proposal for the Web in March 1989 and a second in May 1990.
+                        Together
+                        with Belgian engineer Robert Cailliau, he refined the concept into a formal management proposal
+                        later
+                        that year. That document introduced key ideas such as “hypertext documents” accessible through
+                        “browsers.” By the end of 1990 Berners-Lee had developed both the first web browser and web
+                        server,
+                        running on a NeXT computer at CERN. To prevent it from being accidentally switched off, the
+                        computer
+                        had a hand-written note in red pen: <em>“This machine is a server. DO NOT POWER IT DOWN!!”</em>
+                    </p>
+
+                    <p>
+                        The world’s first website, hosted at <a href="http://info.cern.ch">info.cern.ch</a>, served as
+                        an introduction to the
+                        project.
+                        It provided details on hypertext, technical instructions for setting up a web server, and links
+                        to
+                        emerging websites. The creation of Tim Berners-Lee marked the beginning of the WWW as the most
+                        popular
+                        method for sharing knowledge.
+                    </p>
+
+                    <p>
+                        Whenever you click a link or enter a web address, your browser goes through several steps before
+                        displaying
+                        the page. This process involves key web technologies that work together, including URIs, HTTP,
+                        and
+                        web
+                        browsers. These systems were initially described by Tim Berners-Lee and are outlined in the
+                        World
+                        Wide
+                        Web Consortium’s <a href="bibliography.html#w3c-2004">(W3C, 2004)</a> <em>Architecture of the
+                            World Wide Web</em>.
+                    </p>
+                </section>
+                <section id="web-page-delivered">
+                    <h2> How a Web page is delivered</h2>
+                    <h3 id="identifying-resource">Identifying the Resource</h3>
+                    <p>
+                        Everything on the web starts with a Uniform Resource Identifier (URI). The most commonly used
+                        type
+                        of
+                        URI
+                        is a Uniform Resource Locator (URL). The W3C explains that “items of interest, referred to as
+                        resources,
+                        are identified by global identifiers called Uniform Resource Identifiers (URI)” <a
+                            href="bibliography.html#w3c-2004">(W3C, 2004)</a>. For
+                        example,
+                        when you type a URL like <code>https://example.com</code>, your browser knows which resource to
+                        request
+                        and where to find it.
+                    </p>
+
+                    <p>
+                        Once the URI is identified, the browser translates the domain name (like
+                        <code>example.com</code>)
+                        into
+                        an IP
+                        address using the Domain Name System (DNS). Then it establishes a TCP connection with the web
+                        server,
+                        creating a direct path for sending and receiving data.
+                    </p>
+
+                    <h3 id="requesting-page">Requesting the Page</h3>
+                    <p>
+                        After the connection is made, the browser sends a request using HTTP (Hypertext Transfer
+                        Protocol).
+                        As CERN explained early on: <em>“The WWW project defines its own protocol for information
+                            transfer,
+                            called
+                            HTTP… The HTTP client sends a document identifier, and the server responds with hypertext or
+                            plain
+                            text”</em>
+                        <a href="bibliography.html#cern-1992">(CERN, 1992)</a>. The most common request is an HTTP <code>GET</code>, which asks the server to send
+                        back
+                        the
+                        contents of the page.
+                    </p>
+
+                    <h3 id="receiving-display">Receiving and Displaying the Content</h3>
+                    <p>
+                        The server responds with the requested file, usually written in HTML. Along with the main
+                        content,
+                        it
+                        provides additional information called metadata, which helps the browser understand how to
+                        process
+                        the
+                        file.
+                        The W3C describes each response as a <em>“representation”</em> — a version of the resource at a
+                        specific
+                        time <a href="bibliography.html#w3c-2004">(W3C, 2004)</a>.
+                    </p>
+
+                    <p>
+                        When the browser receives this data, it reads the HTML and looks for other linked resources,
+                        such as
+                        images,
+                        CSS, or JavaScript. Those resources are requested as needed and help the browser render the
+                        final
+                        page.
+                    </p>
+
+                    <h3 id="why-it-works">Why It Works So Well</h3>
+                    <p>
+                        Tim Berners-Lee (1996) noted that the web was designed as “a common information space in which
+                        we
+                        communicate
+                        by sharing information.” Its success stems from simple, open standards — URIs for naming, HTTP
+                        for
+                        communication,
+                        and HTML for structure — which allow computers worldwide to interoperate.
+                    </p>
+
+                    <h3 id="summary">Summary</h3>
+                    <ol>
+                        <li>The browser reads the URI (address).</li>
+                        <li>It finds the server using DNS and opens a connection.</li>
+                        <li>It sends an HTTP request.</li>
+                        <li>The server replies with the requested page.</li>
+                        <li>The browser downloads additional files and displays the final result.</li>
+                    </ol>
+
+                    <blockquote>
+                        “The Web uses relatively simple technologies with sufficient scalability, efficiency, and
+                        utility
+                        that
+                        they have
+                        resulted in a remarkable information space of interrelated resources” <a href="bibliography.html#w3c-2004">(W3C, 2004)</a>.
+                    </blockquote>
+                </section>
+
+                <section id="how-pages-work">
+                    <h2>Briefly how web pages work</h2>
+
+                    <p>
+                        When a browser loads a webpage, it starts by downloading the HTML and turning it into a
+                        structure
+                        called
+                        the
+                        <strong>Document Object Model (DOM)</strong>. At the same time, it fetches other resources the
+                        page
+                        needs — like
+                        CSS files, which control how the page looks. Once those CSS files are downloaded the browser
+                        processes
+                        them and
+                        builds the <strong>CSS Object Model (CSSOM)</strong>.
+                    </p>
+
+                    <p>
+                        When both the DOM and CSSOM are ready, the browser combines them to form the <strong>render
+                            tree</strong>, which
+                        contains only the elements that will actually appear on the screen (so anything hidden with CSS,
+                        e.g.
+                        <code>display: none</code>, is skipped).
+                    </p>
+
+                    <p>
+                        Next comes the layout stage — also known as <em>reflow</em> — where the browser computes the
+                        size
+                        and
+                        position
+                        of each element based on the screen or window size. After layout it moves to <em>painting</em>,
+                        where it
+                        draws:
+                        text, images, backgrounds, borders, and shadows. For complex pages or animations the browser may
+                        separate content
+                        into different layers so it can update parts of the page more efficiently.
+                    </p>
+
+                    <p>
+                        Because the browser needs the CSSOM and the render tree before it can display styled content,
+                        external
+                        CSS files can
+                        block rendering. This means the page may not fully appear until styles are downloaded and
+                        processed.
+                    </p>
+
+                    <h3>Process (simple)</h3>
+                    <p>In simple terms, the process looks like this:</p>
+                    <pre>
+Load HTML → Build DOM → Load CSS → Build CSSOM → Combine into Render Tree → Layout → Paint &amp; Composite
+      </pre>
+
+                    <p>
+                        Understanding these steps helps developers build faster, smoother websites and improves the user
+                        experience.
+                    </p>
+                </section>
+            </main>
+
+
+        </div>
+    </div>
+    <div id="taskbar">
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><button id="active"><img src="images/IE Home.png" class="icon"
+                                    alt="">Home</button></a></li>
+                    <li><a href="about.html"><button><img src="images/Generic Document.png" class="icon"
+                                    alt="">About</button></a></li>
+                    <li><a href="bibliography.html"><button><img src="images/Generic Document.png" class="icon"
+                                    alt="">Bibliography</button></a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
+</body>
+
+</html>
