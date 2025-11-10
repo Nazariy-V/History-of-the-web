@@ -39,7 +39,12 @@ body {
     background-position: center;
     background-attachment: fixed;
 
-
+    .auth{
+        font-size: 0.8rem;
+        color: var(--main-text-color);
+        padding: 0.2rem;
+        text-align: center;
+    }
     #window {
         border: 5px solid var(--accent-color);
         background-color: var(--accent-color);
