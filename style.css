@@ -1,8 +1,9 @@
 :root {
 
-    --main-bg-color: #ffffff;
-    --heading-bg-color: #f0f0f0;
+    --main-bg-color: #f0f0f0;
+    --heading-bg-color: #d9d9d9;
     --selected-bg-color: #e0e0e0;
+    --nav-bg-color: #dcdcdc;
     --link-color: #0066cc;
     --highlight-text-color: #00790e;
     --accent-text-color: #ffffff;
@@ -55,12 +56,42 @@ body {
         #title {
             color: var(--accent-text-color);
             padding-left: 1%;
-            border-bottom: 5px solid var(--accent-color);
-            border-bottom-style: ridge;
+            border-bottom: 5px ridge var(--accent-color);
             background-color: var(--accent-color);
 
         }
+        #outer_nav {
+            border-bottom: var(--nav-bg-color) 2px outset;
+            background-color: var(--nav-bg-color);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            padding-bottom: 2px;
+            ul {
+                margin: 0;
+                padding: 0;
 
+                li {
+                    display: inline-block;
+                    padding: 2px 3px;
+                    
+
+                    a {
+                        text-decoration: none;
+                        color: var(--main-text-color);
+                        font-size: 0.9rem;
+                        padding: 2px 3px;
+                        width: 5rem;
+                        height: 2rem;
+                        &:hover {
+                            background-color: var(--accent-color);
+                            color: var(--accent-text-color);
+                        }
+
+                    
+                    }
+                }
+            }
+        }
         #webpage {
             scroll-behavior: smooth;
             height: 85vh;
@@ -70,9 +101,12 @@ body {
             background-color: var(--main-bg-color);
             padding: 20px;
 
-            nav ul {
+            .inner_nav{
+                margin: 0 auto;
+            }
+             ul {
                 padding: 0;
-                margin: 0;
+                margin: 0 ;
                 display: flex;
 
                 li {
@@ -122,14 +156,37 @@ body {
             p {
                 line-height: 1.5;
             }
+            figure{
+                max-width: 50%;
+                img{
+                    max-width: 100%;
+                    height: auto;
+                    display: block;
+                }
+                figcaption{
+                    text-align: center;
+                    font-size: 0.8rem;
+                    color: var(--main-text-color);
+                    margin-top: 0.3rem;
+                }
+            }
+            #server-note {
+                color: rgb(185, 0, 0);
+                font-weight: bold;
+                
+            }
 
             blockquote {
                 margin-top: 1em;
                 padding-left: 1em;
                 border-left: 3px solid var(--highlight-text-color);
                 font-style: italic;
-                color: #cfcfcf;
                 opacity: 0.9;
+            }
+            pre{
+                background-color: var(--selected-bg-color);
+                padding: 10px;
+                border-radius: 5px;
             }
 
             #bibliography {

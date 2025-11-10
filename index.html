@@ -11,16 +11,23 @@
 <body>
     <div id="window">
         <div id="title"><img src="images/IE Home.png" class="icon" alt="">How the Web Works </div>
+        <nav id="outer_nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="bibliography.html">Bibliography</a></li>
+            </ul>
+        </nav>
         <div id="webpage">
             <header>
-                <nav>
+                <h1>How the Web Delivers and Renders Pages</h1>
+                <nav  class="inner_nav">
                     <ul>
                         <li><a href="#history">Brief history of the Web</a></li>
                         <li><a href="#web-page-delivered">How a Web page is delivered</a></li>
                         <li><a href="#how-pages-work">Briefly how Web pages work</a></li>
                     </ul>
                 </nav>
-                <h1>How the Web Delivers and Renders Pages</h1>
 
 
             </header>
@@ -36,6 +43,11 @@
                         allowed scientists around the world to share information automatically and efficiently. The Web
                         combined the emerging technologies of computers, data networks, and hypertext into a single,
                         user-friendly global information system.
+                        <figure>
+                            <img src="images/arch1a.gif" alt="Initial architecture diagram of the WWW">
+                            <figcaption> Original WWW architecture diagram from 1990. The pink arrow shows the common standards: URL, and HTTP, with format negotiation of the data type. <a href="bibliography.html#berners-lee-1996">(Berners-Lee, 1996)</a></figcaption>
+                        </figure>
+                    
                     </p>
 
                     <p>
@@ -48,7 +60,12 @@
                         server,
                         running on a NeXT computer at CERN. To prevent it from being accidentally switched off, the
                         computer
-                        had a hand-written note in red pen: <em>“This machine is a server. DO NOT POWER IT DOWN!!”</em>
+                        had a hand-written note in red pen: <em id="server-note">“This machine is a server. DO NOT POWER IT DOWN!!”</em>
+                        <figure>
+                            <img src="images/server_next.jpg" alt="">
+                            <figcaption>A replica of the NeXT machine used by Tim Berners-Lee in 1990 to develop and run the first WWW server, multimedia
+                            browser and web editor <a href="bibliography.html#cern-nd">(CERN)</a></figcaption>
+                        </figure>
                     </p>
 
                     <p>
@@ -88,14 +105,13 @@
                         are identified by global identifiers called Uniform Resource Identifiers (URI)” <a
                             href="bibliography.html#w3c-2004">(W3C, 2004)</a>. For
                         example,
-                        when you type a URL like <code>https://example.com</code>, your browser knows which resource to
+                        when you type a URL like <a  rel="noopener" target="_blank" href="https://example.com">https://example.com</a>, your browser knows which resource to
                         request
                         and where to find it.
                     </p>
 
                     <p>
-                        Once the URI is identified, the browser translates the domain name (like
-                        <code>example.com</code>)
+                        Once the URI is identified, the browser translates the domain name
                         into
                         an IP
                         address using the Domain Name System (DNS). Then it establishes a TCP connection with the web
@@ -217,16 +233,20 @@
                         processed.
                     </p>
 
-                    <h3>Process (simple)</h3>
-                    <p>In simple terms, the process looks like this:</p>
+                    <h3>Simple Process Overview</h3>
+                    <p>To sum up the previous sections, the process looks like this:</p>
                     <pre>
-Load HTML → Build DOM → Load CSS → Build CSSOM → Combine into Render Tree → Layout → Paint &amp; Composite
-      </pre>
+                Load HTML 
+                     &darr;
+Load CSS   &larr;  Parse HTML
+    &darr;                &darr;
+Build CSSOM &rarr; Create DOM Tree
+                     &darr;
+                  Layout
+                     &darr;
+               Paint &amp; Composite
 
-                    <p>
-                        Understanding these steps helps developers build faster, smoother websites and improves the user
-                        experience.
-                    </p>
+      </pre>
                 </section>
             </main>
 
